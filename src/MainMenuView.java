@@ -8,6 +8,7 @@ public class MainMenuView {
         System.out.println("1- list items available");
         System.out.println("2- Add new items");
         System.out.println("3- Update item");
+        System.out.println("4- Remove item");
         return Integer.parseInt(new Scanner(System.in).nextLine());
     }
 
