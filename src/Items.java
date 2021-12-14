@@ -13,4 +13,8 @@ public class Items {
         this.price = price;
         this.stock = stock;
     }
+
+    public void updatestock(int stock) {
+        this.stock = stock;
+    }
 }

@@ -8,7 +8,6 @@ public class Startup {
         Startup s = new Startup();
         s.createItems();
     }
-
     private void createItems() {
         items = new ArrayList<>();
         items.add(new Items(1,"Nike","Travis scott, Jordan 1",1000, 5 ));
@@ -17,6 +16,5 @@ public class Startup {
         items.add(new Items(4,"Nike", "Jordan 1, Student of the Year", 600, 2));
         MainMenuController mmc = new MainMenuController();
         mmc.mainMenu();
-
     }
 }
