@@ -9,7 +9,10 @@ public class MainMenuController extends Startup {
         switch (selection){
             case 1:
                 for(Items i : items) {
-                    System.out.println(i.productName);
+                    System.out.println("ProductID: "+ i.productID + ", Manufacturer: " +  i.manufacturer +
+                            ", Product Name: " + i.productName
+                            + ", Price: " + i.price +
+                            ", Stock Available: " + i.stock);
                 }
             default :
                 System.out.println("Please selection option 1");
