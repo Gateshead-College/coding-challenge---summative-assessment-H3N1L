@@ -7,6 +7,11 @@ public class MainMenuController {
 
     ArrayList<Items> items = new ArrayList<>();
 
+    public void startUp() {
+        AddItems();
+        getData();
+    }
+
     public void getData() {
         Initialise init = new Initialise();
         items = init.getItems(init.readFile(Initialise.stockitems));

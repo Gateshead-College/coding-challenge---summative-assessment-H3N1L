@@ -1,17 +1,19 @@
 public class User {
 
     String username;
-    String Password;
+    String password;
     String forename;
     String surname;
     int employeeID;
+    boolean admin;
 
 
-    public User(String username, String password, String forename, String surname, int employeeID) {
+    public User(String username, String password, String forename, String surname, int employeeID, boolean admin) {
         this.username = username;
-        Password = password;
+        this.password = password;
         this.forename = forename;
         this.surname = surname;
         this.employeeID = employeeID;
+        this.admin = admin;
     }
 }
