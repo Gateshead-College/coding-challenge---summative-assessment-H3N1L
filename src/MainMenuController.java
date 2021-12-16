@@ -2,17 +2,17 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class MainMenuController {
+public class MainMenuController  {
     Scanner scn = new Scanner(System.in);
 
     ArrayList<Items> items = new ArrayList<>();
 
     public void startUp() {
         AddItems();
-        getData();
+        getStockData();
     }
 
-    public void getData() {
+    public void getStockData() {
         Initialise init = new Initialise();
         items = init.getItems(init.readFile(Initialise.stockitems));
         mainMenu();
@@ -25,7 +25,8 @@ public class MainMenuController {
         System.out.println("2- Add new items");
         System.out.println("3- Update item");
         System.out.println("4- Remove item");
-        System.out.println("5- Exit");
+        System.out.println("5- Account Settings");
+        System.out.println("6- Exit");
         int selection = Integer.parseInt(new Scanner(System.in).nextLine());
         handlechoice(selection);
     }
@@ -45,6 +46,11 @@ public class MainMenuController {
                 deleteItem();
                 break;
             case 5 :
+                Login lg = new Login();
+                lg.getUsers();
+                lg.accountMenu();
+
+            case 6 :
                 exitApplication();
                 return;
             default :
@@ -52,6 +58,7 @@ public class MainMenuController {
         }
         mainMenu();
     }
+
 
     private void exitApplication() {
         Initialise.writeData(items);

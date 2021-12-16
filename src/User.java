@@ -16,4 +16,25 @@ public class User {
         this.employeeID = employeeID;
         this.admin = admin;
     }
+
+    public void updateUsername(String update) {
+        this.username = update;
+    }
+
+    public void updatePassword(String update) {
+        this.password = update;
+    }
+
+    public void updateForename(String update) {
+        this.forename = update;
+    }
+
+    public void updateSurname(String update) {
+        this.surname = update;
+    }
+
+    public void updateID(int update) {
+        this.employeeID = update;
+    }
+
 }
