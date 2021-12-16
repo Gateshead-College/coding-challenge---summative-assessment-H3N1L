@@ -7,6 +7,12 @@ public class Login {
 
     ArrayList<User> users = new ArrayList<>();
 
+    public void getUserData() {
+        InitialiseUsers init = new InitialiseUsers();
+        users = init.getUsers(init.readFile(InitialiseUsers.userFile));
+
+    }
+
 
     public void checkDetails() {
         MainMenuController menu = new MainMenuController();
